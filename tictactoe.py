@@ -191,8 +191,8 @@ def game_table():
 
 def replay():
     global row1, row2, row3, turn
-    x = input('Do you wish to play again? (Y/N): ')
-    if x == 'Y':
+    x = input('Do you wish to play again? Type Y if yes or just type anything for no. : ')
+    if x == 'Y' or x == 'y':
         turn = 0
         row1 = [' ', ' ', ' ']
         row2 = [' ', ' ', ' ']

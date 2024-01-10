@@ -101,6 +101,7 @@ def user_interface(ymdt):
 
 #############################################################################
 
+#PROGRAM LOGIC
 #While loop for program
 while date == True:
     #While loop for correct input format
@@ -118,7 +119,6 @@ while date == True:
             print("Formatação inválida. Tente novamente.")
             print(' ')
 
-    #Program Logic
     datedif = datecalc(mydate,newdate)
     user_interface(datedif)
     dateagain()

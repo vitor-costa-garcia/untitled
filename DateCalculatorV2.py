@@ -34,11 +34,9 @@ def datecalc(nowdate,inputdate):
 
 #Boring math to organize days into years, months and days
     datedelta = datedelta.days
-    yeardelta = ((datedelta - (datedelta%365))/365)
-    monthdelta = (datedelta-(yeardelta*365)-((datedelta-(yeardelta*365))%30))
-    daydelta = ((datedelta-(yeardelta*365))%30)
-    yeardelta += ((monthdelta-(monthdelta%12))/12)
-    monthdelta -= (monthdelta-(monthdelta%12))
+    yeardelta = datedelta//365
+    monthdelta = (datedelta%365)//30
+    daydelta = (datedelta%365)%30
     
     return (yeardelta,monthdelta,daydelta,time)
 

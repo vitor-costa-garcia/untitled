@@ -112,7 +112,7 @@ while date == True:
     while True:
         try:
             #Ask for input date
-            chosendate = input('Qual data deseja verificar? dia-mes-ano(D-M-YYYY): ')
+            chosendate = input('Qual data deseja verificar? dia-mes-ano(DD-MM-YYYY): ')
             print(' ')
             #Split the numbers from the input date to a datetime date (DD-MM-YYYY)
             date = chosendate.split('-')

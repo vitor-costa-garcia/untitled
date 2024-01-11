@@ -24,21 +24,27 @@ def dateagain():
 #############################################################################
 
 def datecalc(nowdate,inputdate):
+#Incase inputdate == nowdate
+    try:
 #Check if input dates are from future or past
-    if nowdate > inputdate:
-        time = 0
-        datedelta = nowdate - inputdate
-    elif inputdate > nowdate:
-        time = 1
-        datedelta = inputdate - nowdate
+        if nowdate > inputdate:
+            time = 0
+            datedelta = nowdate - inputdate
+        elif inputdate > nowdate:
+            time = 1
+            datedelta = inputdate - nowdate
 
-#Boring math to organize days into years, months and days
-    datedelta = datedelta.days
-    yeardelta = datedelta//365
-    monthdelta = (datedelta%365)//30
-    daydelta = (datedelta%365)%30
-    
-    return (yeardelta,monthdelta,daydelta,time)
+    #Boring math to organize days into years, months and days
+        datedelta = datedelta.days
+        yeardelta = datedelta//365
+        monthdelta = (datedelta%365)//30
+        daydelta = (datedelta%365)%30
+        
+        return (yeardelta,monthdelta,daydelta,time)
+
+    except:
+
+        return (0,0,0,0)
 
 #############################################################################
 

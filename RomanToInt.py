@@ -9,9 +9,11 @@ class Solution:
             
         romanNum.reverse()
         previousIndex = 0
+        first = True
         for i in romanNum:
-            if romanNum.index(i) == 0:
+            if first:
                 totalValue += romanValues[i]
+                first = False
             elif romanValues[romanNum[previousIndex]] > romanValues[i]:
                 totalValue -= romanValues[i]
                 previousIndex += 1
